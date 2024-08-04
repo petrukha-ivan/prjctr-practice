@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-app-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deployment-app-web
+  template:
+    metadata:
+      labels:
+        app: deployment-app-web
+    spec:
+      containers:
+        - name: app-web
+          image: ghcr.io/petrukha-ivan/app-web:latest 
