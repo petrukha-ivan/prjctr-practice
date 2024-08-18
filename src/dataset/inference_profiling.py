@@ -37,9 +37,9 @@ def test_thread_pool_inference(corpus, model):
             return results
 
 
-def test_dusk_inference(corpus, model):
+def test_dask_inference(corpus, model):
     client = Client()
-    with time_profile('Dusk inference'):
+    with time_profile('Dask inference'):
         futures = [client.submit(model.predict, batch) for batch in batch_generator(corpus)]
         results = client.gather(futures)
         return results
@@ -62,7 +62,7 @@ def main():
     test_naive_inference(corpus, model)
     test_process_pool_inference(corpus, model)
     test_thread_pool_inference(corpus, model)
-    test_dusk_inference(corpus, model)
+    test_dask_inference(corpus, model)
     test_ray_inference(corpus, model)
 
 
