@@ -14,3 +14,4 @@ sentence-transformers==2.2.2
 lance==1.2.1
 lancedb==0.12.0
 sentence-transformers==2.2.2
+argilla==2.0.1
