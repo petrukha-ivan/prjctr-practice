@@ -5,3 +5,7 @@ s3fs==0.4.2
 pandas==2.2.2
 tables==3.10.1
 pyarrow==17.0.0
+scikit-learn==1.5.1
+ray==2.34.0
+dask==2024.8.1
+distributed==2024.8.1
