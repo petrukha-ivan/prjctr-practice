@@ -24,3 +24,22 @@ Run with K8S
 kubectl create -f .k8s/minio.yaml
 kubectl port-forward --address=0.0.0.0 pod/minio 9000:9000 9001:9001
 ```
+
+## Data Labeling
+
+Run Argilla
+
+```bash
+docker run -it --rm --name argilla -p 6900:6900 argilla/argilla-quickstart:v2.0.0rc1
+```
+
+Default credentials
+
+```
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=12345678
+ADMIN_API_KEY=admin.apikey
+
+ANNOTATOR_USERNAME=argilla
+ANNOTATOR_PASSWORD=12345678
+```
