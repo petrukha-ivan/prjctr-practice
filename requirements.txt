@@ -9,3 +9,4 @@ scikit-learn==1.5.1
 ray==2.34.0
 dask==2024.8.1
 distributed==2024.8.1
+mosaicml-streaming==0.8.0
